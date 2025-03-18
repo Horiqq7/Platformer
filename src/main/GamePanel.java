@@ -31,18 +31,15 @@ public class GamePanel extends JPanel {
     }
 
     private void setPanelSize() {
-        Dimension size = new Dimension(1280, 800);
-        setMinimumSize(size);
-        setMaximumSize(size);
+        Dimension size = new Dimension(Game.GAME_WIDTH, Game.GAME_HEIGHT);
         setPreferredSize(size);
+        System.out.println("size: " + Game.GAME_HEIGHT + " " + Game.GAME_WIDTH);
     }
-
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         game.render(g);
     }
-
 
     public void updateGame() {
     }
